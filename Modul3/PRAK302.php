@@ -21,18 +21,18 @@
 
         $i = 1;
         while ($i <= $tinggi) {
-            $j = 1;
-            while ($j < $i) {
-                echo "&nbsp;" . "&nbsp;" . "&nbsp;" . "&nbsp;" . "&nbsp;";
-                $j++;
-            }
-            $k = $tinggi;
-            while ($k >= $i) {
+            $j = $tinggi;
+            while ($j >= $i) {
                 echo "<img src='$alamat_gambar' width='20' height='20'/>";
-                $k--;
+                $j--;
             }
             echo '<br>';
             $i++;
+            $k = 1;
+            while ($k < $i) {
+                echo "&nbsp;" . "&nbsp;" . "&nbsp;" . "&nbsp;" . "&nbsp;";
+                $k++;
+            }
         }
     }
     ?>
