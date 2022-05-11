@@ -24,7 +24,6 @@ function tampildataperpustakaan($tabel)
                 echo "</td>";
                 echo "</tr>";
             }
-            // echo "Menampilkan ".count($result)." data";
         }elseif ($tabel == "buku") {
             foreach ($result as $row) {
                 echo "<tr>";
@@ -39,7 +38,6 @@ function tampildataperpustakaan($tabel)
                 echo "</td>";
                 echo "</tr>";
             }
-            // echo "Menampilkan ".count($result)." data";
         }elseif ($tabel == "peminjaman") {
             foreach ($result as $row) {
                 echo "<tr>";
@@ -52,7 +50,6 @@ function tampildataperpustakaan($tabel)
                 echo "</td>";
                 echo "</tr>";
             }
-            // echo "Menampilkan ".count($result)." data";
         }
     }
 }
