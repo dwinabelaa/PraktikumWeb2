@@ -49,7 +49,6 @@ if (isset($_GET['id_buku'])) {
                         echo "<button type='submit' name='update'>Update</button>";
                     }else {
                         echo "<button type='submit' name='submit'>Tambah</button>";
-                        
                     }
                     ?>
                 </td>
