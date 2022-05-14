@@ -7,7 +7,7 @@ function tampildataperpustakaan($tabel)
     $stmt = koneksi()->prepare("SELECT * FROM $tabel");
     $stmt->execute();
     $result = $stmt->fetchAll();
-
+ 
     if (!empty($result)) {
         if ($tabel == "member") {
             foreach ($result as $row) {
@@ -168,4 +168,3 @@ function hapuspeminjaman($id_peminjaman)
         header('location:Peminjaman.php');
     }
 }
-?>
