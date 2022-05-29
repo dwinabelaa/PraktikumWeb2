@@ -41,7 +41,6 @@ if (!isset($_SESSION['nomor_member'])) {
                 Alamat
             </td>
             <td>
-
                 <textarea name="alamat" cols="30" rows="10" required> <?php echo (isset($_GET['id_member'])) ?  $result[0]["alamat"]  : ""; ?> </textarea> <br>
             </td>
         </tr>

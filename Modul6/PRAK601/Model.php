@@ -57,11 +57,11 @@ function tampildataperpustakaan($tabel)
 
 // MEMBER
 // fungsi tambah data member
-function tambahdatamember($nama, $nomor, $alamat, $tgl_mendaftar, $tgl_terakhir_bayar)
+function tambahdatamember($nama, $nomor, $password, $alamat, $tgl_mendaftar, $tgl_terakhir_bayar)
 {
-    $sql = "INSERT INTO `member` ( `nama_member`, `nomor_member`, `alamat`, `tgl_mendaftar`, `tgl_terakhir_bayar`) VALUES (:nama,:nomor,:alamat,:tgl_mendaftar,:tgl_terakhir_bayar)";
+    $sql = "INSERT INTO `member` ( `nama_member`, `nomor_member`, `password`, `alamat`, `tgl_mendaftar`, `tgl_terakhir_bayar`) VALUES (:nama,:nomor,:password,:alamat,:tgl_mendaftar,:tgl_terakhir_bayar)";
     $stmt = koneksi()->prepare($sql);
-    $result = $stmt->execute(array(':nama' => $nama, ':nomor' => $nomor, ':alamat' => $alamat, ':tgl_mendaftar' => $tgl_mendaftar, ':tgl_terakhir_bayar' => $tgl_terakhir_bayar));
+    $result = $stmt->execute(array(':nama' => $nama, ':nomor' => $nomor, ':password' => $password, ':alamat' => $alamat, ':tgl_mendaftar' => $tgl_mendaftar, ':tgl_terakhir_bayar' => $tgl_terakhir_bayar));
     if (!empty($result)) {
         header('location:Member.php');
     }
@@ -74,10 +74,10 @@ function editmember()
     $GLOBALS['result'] = $stmt->fetchAll();
 }
 // fungsi update member
-function updatemember($id, $nama, $nomor, $alamat, $tgl_daftar, $tgl_terakhir_bayar)
+function updatemember($id, $nama, $nomor, $password, $alamat, $tgl_daftar, $tgl_terakhir_bayar)
 {
     $pdo_statement = koneksi()->prepare(
-        "update member set nama_member='" . $nama . "', nomor_member='" . $nomor . "', alamat='" . $alamat . "', tgl_mendaftar='" . $tgl_daftar . "', tgl_terakhir_bayar='" . $tgl_terakhir_bayar . "' where id_member=" . $id
+        "update member set nama_member='" . $nama . "', nomor_member='" . $nomor . "', password='" . $password . "', alamat='" . $alamat . "', tgl_mendaftar='" . $tgl_daftar . "', tgl_terakhir_bayar='" . $tgl_terakhir_bayar . "' where id_member=" . $id
     );
     $result = $pdo_statement->execute();
     if ($result) {
