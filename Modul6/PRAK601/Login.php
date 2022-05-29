@@ -11,7 +11,6 @@ $hasil = $sql->fetch();
 if ($hasil) {
     if ($password == $hasil["password"]) {
         $_SESSION["nomor_member"] = $hasil['nomor_member'];
-        // $_SESSION["nama_member"] = $hasil['nama_member'];
         header("Location: index.php");
     }
 } else {

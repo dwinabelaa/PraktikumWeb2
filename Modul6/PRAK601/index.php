@@ -1,10 +1,3 @@
-<?php
-session_start();
-// if (!isset($_SESSION['nomor_member'])) {
-//     header("Location: ErrorPage.php");
-// }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,9 +1,6 @@
 <?php
 session_start();
 include 'Koneksi.php';
-// if (isset($_SESSION['nomor_member'])) {
-//     header("Location: index.php");
-// }
 ?>
 
 <!DOCTYPE html>

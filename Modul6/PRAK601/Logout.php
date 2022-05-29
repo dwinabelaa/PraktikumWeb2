@@ -10,10 +10,8 @@
 
 <body>
     <?php
-
     session_start();
     session_destroy();
-
     header("Location: FormLogin.php");
     ?>
 </body>
